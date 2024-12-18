@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- 添加字体图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">CATCHER XIAO</div>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="active">首页</a>
+                <a href="#about">关于我</a>
+                <a href="#chat">AI助手</a>
+                <a href="#contact">联系方式</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hello,<br><span class="second-line">I'm <span class="highlight">Catcher Xiao</span></span></h1>
+            <p class="hero-subtitle">Product Manager & E-commerce entrepreneur </p>
+        </div>
+        
+        <!-- 照片轮播 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image/img1.jpeg" alt="照片1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/img2.jpeg" alt="照片2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/img3.jpeg" alt="照片3">
+                </div>
+            </div>
+            <!-- 只保留分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="about-section" id="about">
+        <div class="section-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>关于我</h2>
+                    <p class="subtitle">让你的选择变正确</p>
+                    <div class="about-description">
+                        <p>曾就职于阿里、百度、腾讯，现电商创业，深耕潮玩盲盒行业，公司规模 10人+，年成交额过千万</p>
+                    </div>
+                    <div class="skills">
+                        <span class="skill-tag">产品设计</span>
+                        <span class="skill-tag">电商运营</span>
+                        <span class="skill-tag">用户体验</span>
+                        <span class="skill-tag">数据分析</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="image/touxiang.JPG" alt="个人头像">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在contact-section前添加AI聊天模块 -->
+    <section class="chat-section" id="chat">
+        <div class="section-container">
+            <h2>与 Catcher Xiao 的分身聊聊天</h2>
+            <p class="subtitle">Hi，我是Catcher Xiao 的分身，欢迎聊聊</p>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <!-- 消息会动态添加到这里 -->
+                </div>
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea id="chatInput" placeholder="输入您想问的问题..." rows="2"></textarea>
+                        <label for="fileInput" class="upload-btn">
+                            <i class="fas fa-paperclip"></i>
+                            <input type="file" id="fileInput" accept=".pdf,.doc,.docx,image/*" style="display: none;">
+                        </label>
+                    </div>
+                    <button id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <h2>联系我</h2>
+            <p class="subtitle">让我们保持联系</p>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fab fa-weixin"></i>
+                    </div>
+                    <h3>微信</h3>
+                    <img src="image/wechat_qr.JPG" alt="微信二维码" class="qr-code">
+                </div>
+                
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3>飞书</h3>
+                    <img src="image/feishu_qr.JPG" alt="飞书二维码" class="qr-code">
+                </div>
+
+                <div class="contact-card">
+                    <div class="card-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>电话</h3>
+                    <p class="phone-number">+86 132-6023-0926</p>
+                    <a href="tel:+8613260230926" class="phone-link">点击打电话</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://weibo.com/u/1916508250" class="social-icon" target="_blank"><i class="fab fa-weibo"></i></a>
+                <a href="https://maimai.cn/contact/share/card?u=xbjgcwxllvk8" class="social-icon maimai-icon" target="_blank">
+                    <img src="image/maimai.png" alt="脉脉" />
+                </a>
+            </div>
+            <p class="copyright">© 2024 Catcher Xiao. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <!-- 在 </body> 前添加 marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html> 
